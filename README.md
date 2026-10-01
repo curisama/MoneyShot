@@ -65,10 +65,20 @@ Snipping Tool and tells you if another app already owns a shortcut.
 
 ## Install
 
-Download **`MoneyShot-Setup-x.y.exe`** from [Releases](../../releases) and run it.
-No administrator rights needed; it installs into your user profile and can be removed from *Settings → Apps*.
+1. Open the **[latest release](https://github.com/curisama/MoneyShot/releases/latest)** and download **`MoneyShot-Setup-x.y.exe`** (under 1 MB).
+2. Run it. If Windows shows *"Windows protected your PC"*, click **More info → Run anyway**
+   — the installer isn't code-signed yet, so SmartScreen doesn't know the publisher.
+3. Click **Install**. No administrator rights needed: it goes into your user folder
+   (`%LOCALAPPDATA%\Programs\Money Shot`) and adds a Start menu shortcut.
+4. Money Shot starts in the tray (bottom-right, near the clock). Press **`PrintScreen`** to try it.
+   Tray icon: click = region capture, double-click = open the editor, right-click = menu (all capture modes, **Settings…**, Quit).
 
-Windows SmartScreen may warn about an unknown publisher because the installer is not code-signed.
+**Windows 11:** if `PrintScreen` opens the Snipping Tool instead, open Settings (right-click the tray icon → **Settings…**,
+or start Money Shot again from the Start menu). It notices and shows a **Reclaim PrintScreen Key** button.
+
+**Update:** run the new installer over the old one; settings and downloaded AI models are kept.
+**Uninstall:** *Settings → Apps → Installed apps → Money Shot → Uninstall*.
+Downloaded AI models live in `%APPDATA%\Money Shot\models` — delete that folder too if you want everything gone.
 
 ## AI features are optional
 
