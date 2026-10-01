@@ -1,0 +1,12 @@
+# 빌드 산출물
+*.exe
+*.pdb
+
+
+# 개발 중 쓰던 일회성 패치·확인 스크립트
+.dev/
+
+# 배포 산출물
+"Money Shot*설치.exe"
+"Money Shot*.zip"
+installer/Info.cs

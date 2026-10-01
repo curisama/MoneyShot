@@ -1,0 +1,84 @@
+<p align="center"><img src="assets/icon-1024.png" width="128" alt="Money Shot"></p>
+
+<h1 align="center">Money Shot</h1>
+<p align="center"><b>결정적 한 컷을 건지는 캡처 도구.</b> 1MB도 안 되는 윈도우 캡처 앱에 꽤 쓸 만한 편집기를 넣었다.<br>
+<a href="README.md">English</a></p>
+
+---
+
+**1MB 미만. 계정도, 수집도 없다.** 트레이에 상주하고, 컴퓨터를 켜면 창 없이 올라오며, 단축키는 켜자마자 먹는다.
+캡처하면 클립보드 복사는 이미 끝나 있고 우하단에 썸네일이 튀어나온다("Money~~!!"). 무시하면 사라지고, 누르면 편집창이 열린다.
+
+<p align="center"><img src="docs/screenshots/editor-ko.jpg" width="820" alt="편집창"></p>
+
+## 캡처
+
+| 단축키 | 동작 |
+|---|---|
+| `PrintScreen` | 영역 (Space = 창, Ctrl+A = 모니터 전체, 8배 확대경과 색상값) |
+| `Ctrl` + `PrintScreen` | 스크롤 캡처 — 굴린 양을 믿지 않고 내용을 대조해 이어붙인다 |
+| `Alt` + `PrintScreen` | 커서 아래 창 |
+| `Shift` + `PrintScreen` | 커서가 있는 모니터 전체 |
+| `Ctrl` + `Shift` + `E` | 마지막 캡처를 편집창에서 열기 |
+
+다중 모니터와 모니터별 배율이 섞인 환경도 물리 픽셀 기준으로 다룬다.
+
+<p align="center"><img src="docs/screenshots/thumbnail.png" width="300" alt="캡처 썸네일"></p>
+
+## 편집
+
+- **레이어** — 비파괴 마스크, 불투명도, **블렌드 모드 24종**, **그룹**, **조정 레이어**
+- **레이어 효과** — 그림자, 바깥·안쪽 광선, 안쪽 그림자, 색 덮기, 테두리 (레이어를 고치면 따라온다)
+- **선택** — 사각형, 원형, 올가미, 자동 올가미, **색상 범위**, **물체 선택(AI)**: 누르면 그 물체만, 다시 누르면 더 넓게
+- **고치기** — 스팟 힐링, 도장, 내용 채우기, 유동화(밀기·문지르기·흐리게)
+- **보정** — 레벨, 커브, 색조/채도, 컬러 밸런스, 흑백, 그리고 라이트룸식 **RAW 보정**
+  (노출, 화이트 밸런스, 텍스처, 부분 대비, 디헤이즈, 톤 커브, HSL, 색 보정, 선명하게, 노이즈 감소, 렌즈, 기하)
+- **필터** — 가우시안·동작 흐림, 노이즈, 비네팅, 블룸, 톤 대비, 렌즈 왜곡, 노출, 그라디언트 맵, 그레인, **디더링** 11가지
+- **배경 지우기(AI)**와 다듬기 창(가장자리·대비·경계 이동), 머리카락·복잡한 배경용 **정밀** 모드
+- **마크업** — 사각형, 타원, 화살표, 직선, 펜, 형광펜, 텍스트, 번호 스탬프
+- **변형** — 자유 변형, 기울이기, **원근**, 자르기, 크기, 회전, 눈금자·가이드(달라붙기)
+- **PSD** — PSD/PSB를 레이어째 연다(8/16비트, RGB/흑백/CMYK). 레이어를 살려 PSD로 저장
+- 한국어·영어 화면 (윈도우를 따르고, 설정에서 바꿀 수 있다)
+
+| 배경 지우기 | 물체 선택 |
+|---|---|
+| <img src="docs/screenshots/cutout.jpg" alt="배경 지우기"> | <img src="docs/screenshots/object-select.jpg" alt="물체 선택"> |
+
+<p align="center"><img src="docs/screenshots/raw-develop.jpg" width="820" alt="RAW 보정 전후"><br><sub>RAW 보정 — 전 / 후</sub></p>
+
+## 설치
+
+[Releases](../../releases)에서 **`MoneyShot-Setup-x.y.exe`**를 받아 실행한다.
+관리자 권한이 필요 없고, 사용자 폴더에 설치되며 *설정 → 앱*에서 지울 수 있다.
+
+설치 파일에 코드 서명이 없어서 윈도우 SmartScreen이 "알 수 없는 게시자" 경고를 띄울 수 있다.
+
+## AI 기능은 선택
+
+모든 기능이 오프라인으로 돈다. AI 기능(배경 지우기, 정밀 배경 지우기, 물체·피사체 선택)은
+**처음 쓸 때, 묻고 나서** 원래 배포처에서 모델을 받는다.
+
+| 기능 | 모델 | 크기 | 라이선스 |
+|---|---|---|---|
+| 배경 지우기 | silueta (rembg / U-2-Net) | 44MB | rembg MIT, 가중치는 원 배포처 기준 |
+| 정밀 배경 지우기 | BiRefNet lite | 224MB | MIT |
+| 물체 선택 | MobileSAM | 45MB | MIT / Apache-2.0 |
+| 추론 엔진 | ONNX Runtime 1.16.3 | 10MB | MIT |
+
+받은 파일은 정해 둔 SHA-256과 맞을 때만 쓴다. Money Shot은 아무것도 수집하거나 보내지 않는다.
+
+## 직접 빌드
+
+Visual Studio도, SDK도, NuGet도 필요 없다. 윈도우에 들어 있는 C# 컴파일러(.NET Framework 4.x)만 쓴다.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File build.ps1          # → Money Shot.exe (약 1초)
+powershell -ExecutionPolicy Bypass -File make-installer.ps1  # → 설치 파일 한 개
+```
+
+## 출처와 라이선스
+
+Money Shot은 MIT 라이선스다. 편집 기능 일부는 Robbie Tilton의 [Compositor](https://github.com/robbietilton/Compositor)(MIT)에서 옮겼다 —
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) 참고.
+Adobe·Photoshop·Camera Raw는 Adobe의 상표이며, Money Shot은 Adobe와 관계가 없다.
+스크린샷의 예시 사진은 Wikimedia Commons(CC0) 것이다.
