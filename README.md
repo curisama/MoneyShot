@@ -16,13 +16,29 @@ Ignore it and it goes away; click it to open the editor.
 
 | Shortcut | Action |
 |---|---|
-| `PrintScreen` | Region (Space = window, Ctrl+A = whole monitor, 8× loupe with color readout) |
-| `Ctrl` + `PrintScreen` | Scrolling capture — stitches pages by matching content, not by trusting scroll amounts |
+| `PrintScreen` | Region |
 | `Alt` + `PrintScreen` | Window under the cursor |
 | `Shift` + `PrintScreen` | Whole monitor under the cursor |
+| `Ctrl` + `PrintScreen` | Scrolling capture (long pages) |
 | `Ctrl` + `Shift` + `E` | Open the last capture in the editor |
 
-Multi-monitor and mixed-DPI setups are handled in physical pixels.
+<p align="center"><img src="docs/screenshots/capture-en.jpg" width="820" alt="Region capture"></p>
+
+**Region.** Drag to select; an 8× loupe shows the exact pixel under the cursor with its coordinates and color.
+Hold `Shift` for a square, click instead of dragging to take the window under the cursor, press `Space` to switch to window mode
+or `Ctrl+A` for the whole monitor. By default it captures the moment you let go; turn that off in Settings to fine-tune with
+handles first (arrows move, `Alt`+arrows resize, then `Enter` copy · `E` edit · `S` save). Right-click or `Esc` cancels.
+
+**Scrolling.** `Ctrl+PrintScreen` finds the scrolling area on its own and asks you to confirm (`Enter`, or drag the corners to fix it).
+It then scrolls and stitches by matching the content itself, not by trusting scroll distances — so fractional DPI, smooth scrolling and
+inertia don't break it. Sticky headers are kept once instead of repeating. `Esc` stops and keeps what's captured so far.
+Works wherever the mouse wheel scrolls.
+
+**After the shot.** It's already on your clipboard. A thumbnail slides into the corner ("Money~~!!"):
+click it to edit, drag it straight into a chat or document, or ignore it and it goes away.
+
+Multi-monitor and mixed-DPI setups are handled in physical pixels. On Windows 11, Settings can take `PrintScreen` back from the
+Snipping Tool and tells you if another app already owns a shortcut.
 
 <p align="center"><img src="docs/screenshots/thumbnail.png" width="300" alt="Capture thumbnail"></p>
 
