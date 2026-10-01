@@ -4,6 +4,9 @@
 <p align="center"><b>결정적 한 컷을 건지는 캡처 도구.</b> 1MB도 안 되는 윈도우 캡처 앱에 꽤 쓸 만한 편집기를 넣었다.<br>
 <a href="README.md">English</a></p>
 
+<p align="center"><a href="https://github.com/curisama/MoneyShot/releases/latest/download/MoneyShot-Setup.exe"><img src="docs/download-ko.svg" width="400" alt="Download"></a><br>
+<sub>누르면 바로 받아진다 → 실행. <i>"Windows의 PC 보호"</i>가 뜨면 <b>추가 정보 → 실행</b> (아직 코드 서명이 없어서 뜨는 경고).</sub></p>
+
 ---
 
 **1MB 미만. 계정도, 수집도 없다.** 트레이에 상주하고, 컴퓨터를 켜면 창 없이 올라오며, 단축키는 켜자마자 먹는다.

@@ -4,6 +4,9 @@
 <p align="center"><b>Grab the shot that matters.</b> A tiny Windows screen-capture tool with a surprisingly capable image editor.<br>
 <a href="README.ko.md">한국어</a></p>
 
+<p align="center"><a href="https://github.com/curisama/MoneyShot/releases/latest/download/MoneyShot-Setup.exe"><img src="docs/download-en.svg" width="380" alt="Download for Windows"></a> <a href="https://github.com/curisama/MoneyShot/releases/latest/download/MoneyShot-Setup.exe"><img src="docs/download-ko.svg" width="380" alt="윈도우용 다운로드"></a><br>
+<sub>Click → run the installer. If Windows says <i>"Windows protected your PC"</i>, choose <b>More info → Run anyway</b> (the installer isn't code-signed yet).</sub></p>
+
 ---
 
 **Under 1 MB. No install wizard maze, no account, no telemetry.** It lives in the tray, starts with Windows without a window,

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="104" viewBox="0 0 560 104">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34D399" stop-opacity="1"/><stop offset="1" stop-color="#34D399" stop-opacity=".88"/></linearGradient></defs>
+  <rect x="2" y="2" width="556" height="100" rx="50" fill="url(#g)"/>
+  <g transform="translate(46,30)" fill="none" stroke="#0B0B0F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 4 V32"/><path d="M10 21 L22 33 L34 21"/><path d="M6 42 H38"/>
+  </g>
+  <text x="104" y="50" font-family="Segoe UI, -apple-system, Helvetica, Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="30" font-weight="700" fill="#0B0B0F">윈도우용 다운로드</text>
+  <text x="104" y="80" font-family="Segoe UI, -apple-system, Helvetica, Arial, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="19" fill="#0B0B0F" fill-opacity=".8">Windows 10 · 11  ·  무료  ·  1MB 미만</text>
+</svg>
