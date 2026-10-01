@@ -64,7 +64,7 @@ namespace MoneyShot
                 if (appIcon != null) return appIcon;
                 try
                 {
-                    var path = System.Reflection.Assembly.GetEntryAssembly().Location;
+                    var path = typeof(Theme).Assembly.Location;
                     using (var ic = new System.Drawing.Icon(System.Drawing.Icon.ExtractAssociatedIcon(path), 32, 32))
                     {
                         var src = System.Windows.Interop.Imaging.CreateBitmapSourceFromHIcon(ic.Handle,
